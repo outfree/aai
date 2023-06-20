@@ -1,0 +1,64 @@
+title_creator:
+  name: 👩🏼‍🎓 Title Creator
+  model_type: text
+  model_id: gpt-3.5-turbo
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Title creator</b>. How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    Make an executive slide title to represent the following idea. Idea: 
+  parse_mode: html
+
+title_creator2:
+  name: 👩🏼‍🎓 Title Creator2
+  model_type: text
+  model_id: gpt-3.5-turbo
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Title creator2</b>. How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    Make an executive slide title to represent the following idea. Idea: 
+  parse_mode: html
+
+title_creator3:
+  name: 👩🏼‍🎓 Title Creator3
+  model_type: text
+  model_id: gpt-3.5-turbo
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Title creator3</b>. How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    Make an executive slide title to represent the following idea. Idea: 
+  parse_mode: html
+
+title_creator4:
+  name: 👩🏼‍🎓 Title Creator4
+  model_type: text
+  model_id: gpt-3.5-turbo
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Title creator4</b>. How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    Make an executive slide title to represent the following idea. Idea: 
+  parse_mode: html
+
+voice:
+  name: 🔉 Voice Recognize
+  model_type: text
+  model_id: gpt-3.5-turbo-16k
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Voice Assistant</b>. I can recognize your audio file or voice message. How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    Make an executive slide title to represent the following idea. Idea: 
+  parse_mode: html
+
+yt_url:
+  name: 🎥 Youtube URL
+  model_type: text
+  model_id: gpt-3.5-turbo-16k
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Youtube assistant</b>. I can parse your YT-link.  How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    
+  parse_mode: html
+
+sample_url:
+  name: 🔗 Sample URL
+  model_type: text
+  model_id: gpt-3.5-turbo-16k
+  welcome_message: 👩🏼‍🎓 Hi, I'm <b>Url Assistant</b>. I can parse your URL and send it to OpenAI.  How can I help you? You can change my mode by /mode command
+  prompt_start: |
+    You are an assistant that provides a summary of an article parsed from a website. The parsed text might contain some irrelevant information because the text is parsed from a URL. 
+    Understand where is the main text of the article and provide a summary. Answer user follow-up questions about the article if needed.
+    Parsed text:
+  parse_mode: html
