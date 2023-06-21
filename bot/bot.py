@@ -307,19 +307,25 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
                 gen = fake_gen()
 
             prev_answer = ""
+            chunks_length = 1
             async for gen_item in gen:
                 status, answer, (n_input_tokens, n_output_tokens), n_first_dialog_messages_removed = gen_item
                 #message_len = abs(len(answer) + len(prev_answer))
-                answer = answer[:4096]  # telegram message limit
+                answer = answer[:16384]  # telegram message limit
 
-                
                 # update only when 100 new symbols are ready
                 if abs(len(answer) - len(prev_answer)) < 100 and status != "finished":
                     continue
                 
-                #if message_len > 4096 and status != "finished":
+                
+                message_chunks = list(split_text_into_chunks(answer, 4096))
+                answer = message_chunks[-1]
+                
+                if abs(len(message_chunks)) > chunks_length:
+                    chunks_length = abs(len(message_chunks))
+                    placeholder_message = await update.message.reply_text("...")
                     
-
+                
                 try:
                     await context.bot.edit_message_text(answer, chat_id=placeholder_message.chat_id, message_id=placeholder_message.message_id, parse_mode=parse_mode)
                 except telegram.error.BadRequest as e:
