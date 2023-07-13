@@ -16,7 +16,7 @@ services:
     command: python3 bot/bot.py
     restart: always
     volumes:
-      - ./bot:/code/bot
+      - ./:/code
     build:
       context: "."
       dockerfile: Dockerfile

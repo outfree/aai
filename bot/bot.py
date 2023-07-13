@@ -215,6 +215,7 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
         matches = re.match(regex, test_str, re.MULTILINE | re.IGNORECASE)
         if matches != None:
             yt_link = matches.group(0)
+            print(yt_link)
             yt = YouTube(yt_link)
 
             # accessing audio streams of YouTube obj.(first one, more available)
